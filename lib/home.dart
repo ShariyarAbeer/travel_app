@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:travel_app/profile.dart';
 
 import 'search.dart';
 
@@ -95,26 +96,36 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                           width: 5.0,
                         ),
                         InkWell(
-                          onTap: () {},
-                          child: Container(
-                            height: 50.0,
-                            width: 50.0,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(25.0),
-                                color: Colors.blue,
-                                image: DecorationImage(
-                                    image:
-                                        AssetImage("assets/images/pngegg.png"),
-                                    fit: BoxFit.cover)
-                                // boxShadow: [
-                                //   BoxShadow(
-                                //     color: Colors.grey.withOpacity(0.5),
-                                //     spreadRadius: 5,
-                                //     blurRadius: 7,
-                                //     offset: Offset(0, 3),
-                                //   )
-                                // ],
-                                ),
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ProfilePage(),
+                              ),
+                            );
+                          },
+                          child: Hero(
+                            tag: "assets/images/pngegg.png",
+                            child: Container(
+                              height: 50.0,
+                              width: 50.0,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(25.0),
+                                  color: Colors.blue,
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          "assets/images/pngegg.png"),
+                                      fit: BoxFit.cover)
+                                  // boxShadow: [
+                                  //   BoxShadow(
+                                  //     color: Colors.grey.withOpacity(0.5),
+                                  //     spreadRadius: 5,
+                                  //     blurRadius: 7,
+                                  //     offset: Offset(0, 3),
+                                  //   )
+                                  // ],
+                                  ),
+                            ),
                           ),
                         ),
                       ],
