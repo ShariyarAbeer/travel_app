@@ -1,6 +1,5 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
+import 'package:travel_app/addUi.dart';
 import 'package:travel_app/profile.dart';
 
 import 'info.dart';
@@ -234,7 +233,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               child: Info(),
             ),
             Center(
-              child: Search(),
+              child: AddUi(),
             ),
           ],
         ));
