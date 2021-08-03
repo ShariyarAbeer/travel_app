@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:travel_app/profile.dart';
 
+import 'info.dart';
 import 'search.dart';
 
 class Home extends StatefulWidget {
@@ -230,7 +231,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               child: Search(),
             ),
             Center(
-              child: Search(),
+              child: Info(),
             ),
             Center(
               child: Search(),
